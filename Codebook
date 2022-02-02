@@ -1,0 +1,50 @@
+The script run_analysis.R retrieves the Human Activity Recognition Dataset (Anguita, et.al., 2012) and performs the following manipulations:
+
+1.	Merges the training and the test sets to create one data set. This step creates the following variables:
+    	a.	fileUrl: variable containing downloaded zip file.
+      b.	path_rf: path to data folder holding unzipped files.
+      c.	x_train: data table containing X_train.txt data.
+      d.	y_train: data table containing y_train.txt data.
+      e.	subject_train: data table containing subject_train.txt data.
+      f.	x_test: data table containing X_test.txt data.
+      g.	y_test: data table containing y_test.txt data.
+      h.	subject_test: data table containing subject_test.txt data.
+      i.  train_data: column binds both train tables.
+      j.  test_data: column binds both test tables.
+      k.  merged_data: row binds train_data and test_data.
+  
+	2.	Extracts the mean and standard deviation for each measurement. This step creates the following variables.
+      a. subset_measures: extraction of mean and standard deviation for all measurements.
+  
+	3.	Renames the activities in the data set with descriptive terms.
+	
+  4.	Labels the data set with descriptive variable names. Modify "features.txt" and "features_info.txt" variables as follows:
+    a.	tBodyAcc-XYZ		  ->	TimeBodyAccelerometer-XYZ
+    b.	tGravityAcc-XYZ	  ->	TimeGravityAccelerometer-XYZ
+    c.	tBodyAccJerk-XYZ	->	TimeBodyAccelerometerJerk-XYZ
+    d.	tBodyGyro-XYZ	    ->	TimeBodyGyroscope-XYZ
+    e.	tBodyGyroJerk-XYZ	->	TimeBodyGyroscopeJerk-XYZ
+    f.	tBodyAccMag		    ->	TimeBodyAccelerometerMag
+    g.	tGravityAccMag	  ->	TimeGravityAccelerometerMag
+    h.	tBodyAccJerkMag	  ->	TimeBodyAccelerometerJerkMag
+    i.	tBodyGyroMag	    ->	TimeBodyGyroscopeMag
+    j.	tBodyGyroJerkMag	->	TimeBodyGyroscopeJerkMag
+    k.	fBodyAcc-XYZ		  ->	FrequencyBodyAccelerometer-XYZ
+    l.	fBodyAccJerk-XYZ	->	FrequencyBodyAccelerometerJerk-XYZ
+    m.	fBodyGyro-XYZ	    ->	FrequencyBodyGyroscope-XYZ
+    n.	fBodyAccMag		    ->	FrequencyBodyAccelerometerMag
+    o.	fBodyAccJerkMag	  ->	FrequencyBodyAccelerometerJerkMag
+    p.	fBodyGyroMag	    ->	FrequencyBodyGyroscopeMag
+    q.	fBodyGyroJerkMag	->	FrequencyBodyGyroscopeJerkMag
+    r.  gravityMean		    ->	gravityMean
+    s.  tBodyAccMean	    ->	TimeBodyAccelerometerMean
+    t.  tBodyAccJerkMean	->	TimeBodyAccelerometerJerkMean
+    u.  tBodyGyroMean	    ->	TimeBodyGyroscopeMean
+    v.  tBodyGyroJerkMean	->	TimeBodyGyroscopeJerkMean
+
+	5.	Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+      Variable name: tidy_data
+    
+	6.	Writes tidy data set to output file: Garcia_Tidy_Data.txt
+  
+  
