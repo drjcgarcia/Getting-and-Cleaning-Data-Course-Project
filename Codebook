@@ -2,21 +2,21 @@ The script run_analysis.R retrieves the Human Activity Recognition Dataset (Angu
 
 1.	Merges the training and the test sets to create one data set. This step creates the following variables:
     	a.	fileUrl: variable containing downloaded zip file.
-      b.	path_rf: path to data folder holding unzipped files.
-      c.	x_train: data table containing X_train.txt data.
-      d.	y_train: data table containing y_train.txt data.
-      e.	subject_train: data table containing subject_train.txt data.
-      f.	x_test: data table containing X_test.txt data.
-      g.	y_test: data table containing y_test.txt data.
-      h.	subject_test: data table containing subject_test.txt data.
-      i.  train_data: column binds both train tables.
-      j.  test_data: column binds both test tables.
-      k.  merged_data: row binds train_data and test_data.
+      	b.	path_rf: path to data folder holding unzipped files.
+      	c.	x_train: data table containing X_train.txt data.
+      	d.	y_train: data table containing y_train.txt data.
+      	e.	subject_train: data table containing subject_train.txt data.
+      	f.	x_test: data table containing X_test.txt data.
+      	g.	y_test: data table containing y_test.txt data.
+      	h.	subject_test: data table containing subject_test.txt data.
+      	i.  	train_data: column binds both train tables.
+      	j.  	test_data: column binds both test tables.
+      	k.  	merged_data: row binds train_data and test_data.
   
 	2.	Extracts the mean and standard deviation for each measurement. This step creates the following variables.
       a. subset_measures: extraction of mean and standard deviation for all measurements.
   
-	3.	Renames the activities in the data set with descriptive terms.
+	3.	Renames the activities in the data set with descriptive terms.  Changes activity code to activity name.
 	
   4.	Labels the data set with descriptive variable names. Modify "features.txt" and "features_info.txt" variables as follows:
     a.	tBodyAcc-XYZ		  ->	TimeBodyAccelerometer-XYZ
