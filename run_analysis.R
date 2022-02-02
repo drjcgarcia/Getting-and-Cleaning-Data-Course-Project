@@ -67,5 +67,5 @@
    tidy_data <- aggregate(.~subject, merged_data, mean)
    
 # Output Tidy data
-   write.table(tidy_data,"Garcia_Tidy_Data.txt")
+   write.table(tidy_data,"Garcia_Tidy_Data.txt", rownames = FALSE)
    
