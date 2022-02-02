@@ -45,8 +45,8 @@
 
 # Task #1: Merge the training and test sets
     
-    train_data <- cbind(subject_train,x_train,y_train)
-    test_data <- cbind(subject_test,x_test,y_test)
+    train_data <- cbind(subject_train,y_train,x_train)
+    test_data <- cbind(subject_test,y_test,x_test)
     merged_data <- rbind(train_data,test_data)
     
 # Task #2: Extract measurements on the mean and standard deviation 
