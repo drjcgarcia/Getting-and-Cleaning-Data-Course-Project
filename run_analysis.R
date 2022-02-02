@@ -54,7 +54,12 @@
     
     subset_measures <- grep("mean\\(\\)|std\\(\\)",features$functions)
     
-#Task #3-#4: Name activities with descriptive activity names and label dataset.
+# Task #3: Uses descriptive activity names to name the activities in the data set.
+    
+    merged_data$code <- activity$V2[dataset$V1.1]
+
+    
+# Task #4: Name activities with descriptive activity names and label dataset.
     
    colnames(merged_data) <- gsub("^t","Time",colnames(merged_data))
    colnames(merged_data) <- gsub("^f","Frequency",colnames(merged_data))
@@ -67,5 +72,5 @@
    tidy_data <- aggregate(.~subject, merged_data, mean)
    
 # Output Tidy data
-   write.table(tidy_data,"Garcia_Tidy_Data.txt", rownames = FALSE)
+   write.table(tidy_data,"Garcia_Tidy_Data.txt")
    
