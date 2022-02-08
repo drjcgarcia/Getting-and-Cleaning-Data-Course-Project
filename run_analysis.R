@@ -56,7 +56,7 @@
     
 # Task #3: Uses descriptive activity names to name the activities in the data set.
     
-    merged_data$code <- activity$V2[dataset$V1.1]
+    merged_data$code <- activity$V2[merged_data$code]
 
     
 # Task #4: Name activities with descriptive activity names and label dataset.
